@@ -1,4 +1,25 @@
-# Main entrypoint of the workflow. 
-# Please follow the best practices: 
+# Main entrypoint of the workflow.
+# Please follow the best practices:
 # https://snakemake.readthedocs.io/en/stable/snakefiles/best_practices.html,
-# in particular regarding the standardized folder structure mentioned there. 
+# in particular regarding the standardized folder structure mentioned there.
+
+
+# configfile: "config/config.yaml"
+
+
+# inputflags:
+#     access.sequential
+
+
+report: "report/workflow.rst"
+
+
+include: "rules/fake_data.smk"
+include: "rules/find_candidates.smk"
+
+
+rule all:
+    input:
+        # "resources/mason_simulated/alignment_sorted.bam",
+        "results/candidates/breakends.vcf",
+        # compute_results(),

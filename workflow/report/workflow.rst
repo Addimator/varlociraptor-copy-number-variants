@@ -1,0 +1,1 @@
+All files for our copy number variant calling with Varlociraptor!
