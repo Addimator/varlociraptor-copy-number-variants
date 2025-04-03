@@ -14,6 +14,7 @@
 report: "report/workflow.rst"
 
 
+include: "rules/download_tools.smk"
 include: "rules/fake_data.smk"
 include: "rules/find_candidates.smk"
 
@@ -21,5 +22,6 @@ include: "rules/find_candidates.smk"
 rule all:
     input:
         # "resources/mason_simulated/alignment_sorted.bam",
-        "results/candidates/breakends.vcf",
+        # "results/candidates/breakends.vcf",
+        "results/candidates/candidates.vcf",
         # compute_results(),

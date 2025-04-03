@@ -32,8 +32,10 @@ rule genome_index:
 
 rule fake_reads_mason:
     input:
-        genome="resources/genome_cnv_modified.fasta",
-        genome_index="resources/genome_cnv_modified.fasta.fai",
+        genome="resources/genome.fasta",
+        genome_index="resources/genome.fasta.fai",
+        # genome="resources/genome_cnv_modified.fasta",
+        # genome_index="resources/genome_cnv_modified.fasta.fai",
     output:
         # alignment="resources/mason_simulated/alignment.bam",
         fq1="resources/mason_simulated/reads_pe1.fastq",
